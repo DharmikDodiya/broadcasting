@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        document.write('stringify method')
+        document.write('<br>')
+        console.log('stringify method')
+        const obj={
+            name : 'dharmik',
+            obj :{
+                name : 'dharmik',
+                    obj :{
+                name : 'dharmik',
+                    obj :{
+                name : 'dharmik'
+                    }
+                }
+            }
+        }
+
+        console.log(obj);
+        document.write(JSON.stringify(obj,null,2))
+        document.write('<br>')
+        console.log(JSON.stringify(obj,null,2))
+        document.write('========================================')
+        document.write('<br>')
+        console.log('number seperator')
+        document.write('number seperator')
+        document.write('<br>')
+        const num = 600_000_000
+        document.write(num)
+        console.log(num)
+        
+
+        document.write('<br>')
+        document.write('========================================')
+        document.write('<br>')
+        console.log('Flatten a multilevel array')
+        document.write('Flatten a multilevel array')
+        document.write('<br>')
+        const flatten = (array) => {
+            return array.reduce((result,it) =>{
+                return result.concat(Array.isArray(it) ? flatten(it) :it)
+            },[])
+        }
+
+        const arr = [
+            'dharmik',
+            [
+                'shivang',
+                [
+                    'jatin',
+                    [
+                        'sarman',
+                        [
+                            'pujan',
+                            [
+
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+
+        document.write(flatten(arr))
+        console.log(flatten(arr))
+        console.log(arr.flat(Infinity))
+        document.write('<br>')
+        document.write('========================================')
+
+
+
+
+
+
+    </script>
+</body>
+</html>
